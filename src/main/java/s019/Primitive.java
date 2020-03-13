@@ -14,8 +14,7 @@ public class Primitive {
         short x = 12_000;
         System.out.println(x);
 
-        int i = 1_000_000_000;
-        System.out.println(i);
+        int i = 1_000_000_000; System.out.println(i);
 
         long z = 1_000_000_000_000_000L;
         System.out.println(z);
