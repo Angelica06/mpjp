@@ -1,5 +1,7 @@
 package ex;
+import java.lang.Math;
 
+//import jdk.internal.joptsimple.internal.String;
 public class S02 {
 	/**
 	 * Average speed
@@ -9,8 +11,8 @@ public class S02 {
 	 * @return speed in meters per second
 	 */
 	public static double speed(double distance, double time) {
-		// TODO
-		return 0;
+		double result = ((double) (distance/time));
+		return result;
 	}
 
 	/**
@@ -23,8 +25,8 @@ public class S02 {
 	 * @return distance
 	 */
 	public static double distance(int x0, int y0, int x1, int y1) {
-		// TODO
-		return 0;
+		double result=Math.sqrt(Math.pow((x1-x0), 2)+Math.pow((y1-y0), 2));
+		return result;
 	}
 
 	/**
@@ -36,8 +38,10 @@ public class S02 {
 	 * @return the engine capacity in cm^3
 	 */
 	public static double engineCapacity(double bore, double stroke, int nr) {
-		// TODO
-		return 0;
+		double areaCerchio= Math.pow((bore/2),2)*Math.PI;
+		double areaCilindro= areaCerchio*stroke;
+		double result = areaCilindro*nr;
+		return result;
 	}
 
 	/**
@@ -47,8 +51,14 @@ public class S02 {
 	 * @return sum of digits
 	 */
 	public static int digitSum(int value) {
-		// TODO
-		return 0;
+		value=Math.abs(value);
+		int somma= 0;
+		while (value>0) {
+			int cifra= value%10;
+			
+			somma += cifra;
+		}
+		return somma;
 	}
 
 	/**

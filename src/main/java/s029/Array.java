@@ -5,8 +5,8 @@ package s029;
  * in automatico viene inizializzato mettendo in ogni cella quello che sembr apiu sensato, cioè uno 0, un False o un null 
 */
 
-public class Array {
-    public static void main(String[] args) {
+public class Array { //main è il metodo della classe array
+    public static void main(String[] args) { //main è la procedura dentro le graffe, blocco di codice che non ritorna nulla
         int[] array = new int[12];//new creo l' array e con int[12] dico che è lungo 12
         array[0] = 7; //in questo comando invece gli diciamo di mettre il numero 7
 

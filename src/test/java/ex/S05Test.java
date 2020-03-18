@@ -1,5 +1,6 @@
 package ex;
 
+import static org.hamcrest.Matchers.closeTo;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -51,6 +52,20 @@ class S05Test {
 		double actual = S05.average(new int[] { 1, 2, 3 });
 
 		assertThat(actual, is(2.0));
+	}
+	
+	@Test
+	void averagePlain1() {
+		double actual = S05.average(new int[] { -1, 2, 33 });
+
+		assertThat(actual, is(12));
+	}
+	
+	@Test
+	void averagePlain2() {
+		double actual = S05.average(new int[] { 41, -12, 5 });
+
+		assertThat(actual, closeTo(11.33, 0.001));
 	}
 
 	@Test

@@ -1,6 +1,6 @@
 package ex;
 
-import static org.junit.jupiter.api.Assertions.*;
+//import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -79,11 +79,19 @@ class S04Test {
 
 	@Test
 	void fibonacci() {
-		fail("Not yet implemented");
+		long actual= S04.fibonacci(7);
+				
+				assertThat(actual, is(11L));
 	}
+	
+	
 
 	@Test
 	void multiplicationTable() {
-		fail("Not yet implemented");
+		final int INPUT = 3;
+		int [][] actual= S04.multiplicationTable(INPUT);
+		
+		assertThat(actual.length,is(INPUT+1)); //mi dice quante righe ci sono
+		assertThat(actual[0].length,is(INPUT+1)); //quante colonne
 	}
 }

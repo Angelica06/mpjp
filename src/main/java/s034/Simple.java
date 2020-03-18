@@ -1,11 +1,11 @@
 package s034;
 
 public class Simple {
-    static String h() {
-        return "Hi";
+    public static String h() { //il metodo h posso chiamarlo anche senza chiamarlo
+        return "Hi"; //metodo statico
     }
 
-    int f(int a, int b) {
+    /*static*/ int f(int a, int b) {//metodo a istanza, potrei mettere tutto statico
         return a * b;
     }
 

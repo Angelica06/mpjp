@@ -8,8 +8,11 @@ public class S05 {
 	 * @return the input reversed
 	 */
 	public static String reverse(String s) {
-		// TODO
-		return "";
+		StringBuilder result = new StringBuilder(s.length());
+		for (int i = s.length() - 1; i >= 0; i--) {
+			result.append(s.charAt(i));
+		}
+		return result.toString();
 	}
 
 	/**
@@ -19,8 +22,13 @@ public class S05 {
 	 * @return true if the parameter is a palindrome
 	 */
 	public static boolean isPalindrome(String s) {
-		// TODO
-		return false;
+		String result = reverse(s);
+		if (s.equals(result.toString())) { // == confronta il reference!
+			// equals confronta il valore!
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -30,8 +38,18 @@ public class S05 {
 	 * @return a string, same of input but without vowels
 	 */
 	public static String removeVowels(String s) {
-		// TODO
-		return "";
+		StringBuilder result = new StringBuilder();
+		for (int i = 0; i <s.length(); i++) {
+			char cur= s.charAt(i);
+			if (cur != 'a' &&
+					cur != 'e' &&
+					cur != 'i' &&
+					cur != 'o'&&
+					cur != 'u') {
+				result.append(s.charAt(i));
+			}
+		}
+		return result.toString();
 	}
 
 	/**
@@ -53,21 +71,28 @@ public class S05 {
 	 */
 	public static int[] reverse(int[] data) {
 		int[] result = new int[0];
-
-		// TODO
-
+		for (int i=0;i<data.length;i++) {
+			int temp=data[i];
+			for (int j=0; j< data.length;j++) {
+				result[j]=temp;
+			}
+		}
 		return result;
+
 	}
 
 	/**
 	 * Calculate the average
 	 * 
-	 * @param data
+	 * @param data array
 	 * @return the average
 	 */
 	public static double average(int[] data) {
-		// TODO
-		return 0;
+		double somma=data[0];
+		for (int i=1 ; i<data.length ; i++) {
+			somma+=data[i];
+		}
+		return somma/data.length;
 	}
 
 	/**
@@ -77,7 +102,16 @@ public class S05 {
 	 * @return the largest value
 	 */
 	public static int max(int[] data) {
-		// TODO
-		return 0;
+		if (data==null || data.length==0) {
+			return Integer.MIN_VALUE;
+		}
+		
+		int max = data[0];
+		for (int i = 1; i <data.length; i++) {
+			if (data[i] > max) {
+				max = data[i];
+			}
+		}
+		return max;
 	}
 }

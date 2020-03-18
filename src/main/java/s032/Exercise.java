@@ -8,7 +8,7 @@ public class Exercise {
         for (boolean flag : flags) {
             System.out.println(flag);
         }
-
+/*
         for (int i = 0; i < flags.length; i++) {
             if (!flags[i]) {
                 flags[i] = true;
@@ -18,9 +18,9 @@ public class Exercise {
         System.out.println("*** Changed Values ***");
         for (boolean flag : flags) {
             System.out.println(flag);
-        }
+        }*/
 
-        for (boolean flag : flags) {
+        for (boolean flag : flags) { //flag  è una var temporanea
             if (!flag) {
                 flag = true;
             }
